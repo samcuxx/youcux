@@ -35,20 +35,20 @@ export default function VideoInput({ onExtract, isLoading }: VideoInputProps) {
   };
 
   return (
-    <div className="mb-6">
+    <div>
       <form onSubmit={handleSubmit} className="flex items-center">
         <input
           type="text"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="Paste YouTube video URL here"
-          className="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-accent2 bg-white text-gray-800 shadow-sm"
+          className="flex-grow px-4 py-2 border-border rounded-l-md focus:outline-none focus:ring-2 focus:ring-accent2 bg-background text-textPrimary border-foreground border-2"
         />
         {url ? (
           <button
             type="submit"
             disabled={isLoading}
-            className="px-4 py-2 bg-accent2 text-white rounded-r-md hover:bg-accent1 focus:outline-none focus:ring-2 focus:ring-accent2 focus:ring-offset-2 disabled:opacity-50 transition"
+            className="px-4 py-2 bg-accent2 text-background rounded-r-md hover:bg-accent1 focus:outline-none focus:ring-2 focus:ring-accent2 focus:ring-offset-2 disabled:opacity-50"
           >
             {isLoading ? "..." : <FaSearch />}
           </button>
@@ -56,7 +56,7 @@ export default function VideoInput({ onExtract, isLoading }: VideoInputProps) {
           <button
             type="button"
             onClick={handlePaste}
-            className="px-4 py-2 bg-accent2 text-white rounded-r-md hover:bg-accent1 focus:outline-none focus:ring-2 focus:ring-accent2 focus:ring-offset-2 transition"
+            className="px-4 py-2 bg-accent2 text-background rounded-r-md hover:bg-accent1 focus:outline-none focus:ring-2 focus:ring-accent2 focus:ring-offset-2"
           >
             <FaPaste />
           </button>
