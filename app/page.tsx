@@ -7,10 +7,10 @@ export default function Home() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <main>
         <VideoExtractor />
-        <FeatureList /> {/* Add the FeatureList component here */}
         <Instructions />
+        <FeatureList /> {/* Add the FeatureList component here */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

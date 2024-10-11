@@ -3,6 +3,7 @@ import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import ThemeToggle from "./components/ThemeToggle";
+import Navbar from "./components/Navbar"; // Import the Navbar component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,11 +28,8 @@ export default function RootLayout({
           className={`${inter.className} bg-background text-text`}
           suppressHydrationWarning
         >
-          <header className="p-4 flex justify-between items-center">
-            <h1 className="text-2xl font-bold">
-              YouTube Title & Description Extractor
-            </h1>
-            <ThemeToggle />
+          <header>
+            <Navbar /> {/* Include the Navbar here */}
           </header>
           {children}
           <Toaster />
