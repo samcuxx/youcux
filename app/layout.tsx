@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-import ThemeToggle from "./components/ThemeToggle";
 import Navbar from "./components/Navbar"; // Import the Navbar component
 
 const inter = Inter({ subsets: ["latin"] });

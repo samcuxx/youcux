@@ -1,4 +1,3 @@
-import Footer from "./components/Footer";
 import VideoExtractor from "./components/VideoExtractor";
 import FeatureList from "./components/FeatureList"; // Import the FeatureList component
 
