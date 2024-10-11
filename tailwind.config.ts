@@ -11,13 +11,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background-color)",
-        text: "var(--text-color)",
-        textSecondary: "var(--text-color-secondary)",
-        card: "var(--card-background)",
-        border: "var(--border-color)",
-        tableStripe: "var(--table-stripe-color)",
-        tableHover: "var(--table-hover-color)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        textPrimary: "var(--text-primary)",
+        textSecondary: "var(--text-secondary)",
+        accent1: "var(--accent-1)",
+        accent2: "var(--accent-2)",
       },
     },
   },

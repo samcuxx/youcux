@@ -43,7 +43,7 @@ export default function VideoInfo({ info }: VideoInfoProps) {
   };
 
   return (
-    <div className="bg-card shadow-md rounded-lg overflow-hidden">
+    <div className="bg-foreground shadow-md rounded-lg overflow-hidden">
       <div className="relative h-0 pb-[56.25%]">
         <Image
           src={thumbnail}
@@ -56,10 +56,10 @@ export default function VideoInfo({ info }: VideoInfoProps) {
       </div>
       <div className="p-6 space-y-4">
         <div className="flex justify-between items-start">
-          <h2 className="text-2xl font-bold text-text">{title}</h2>
+          <h2 className="text-2xl font-bold text-textPrimary">{title}</h2>
           <button
             onClick={() => copyToClipboard(title, "Title")}
-            className="text-textSecondary hover:text-text"
+            className="text-accent2 hover:text-accent1"
             title="Copy title"
           >
             <FaCopy />
@@ -78,14 +78,14 @@ export default function VideoInfo({ info }: VideoInfoProps) {
                 "Video URL"
               )
             }
-            className="text-textSecondary hover:text-text"
+            className="text-accent2 hover:text-accent1"
             title="Copy video URL"
           >
             <FaLink />
           </button>
           <button
             onClick={downloadThumbnail}
-            className="text-textSecondary hover:text-text"
+            className="text-accent2 hover:text-accent1"
             title="Download thumbnail"
           >
             <FaDownload />
@@ -93,12 +93,12 @@ export default function VideoInfo({ info }: VideoInfoProps) {
         </div>
         <div>
           <div className="flex justify-between items-start">
-            <h3 className="text-lg font-semibold mb-2 text-text">
+            <h3 className="text-lg font-semibold mb-2 text-textPrimary">
               Description
             </h3>
             <button
               onClick={() => copyToClipboard(description, "Description")}
-              className="text-textSecondary hover:text-text"
+              className="text-accent2 hover:text-accent1"
               title="Copy description"
             >
               <FaCopy />
@@ -111,10 +111,12 @@ export default function VideoInfo({ info }: VideoInfoProps) {
         {tags.length > 0 && (
           <div>
             <div className="flex justify-between items-start">
-              <h3 className="text-lg font-semibold mb-2 text-text">Tags</h3>
+              <h3 className="text-lg font-semibold mb-2 text-textPrimary">
+                Tags
+              </h3>
               <button
                 onClick={() => copyToClipboard(tags.join(", "), "Tags")}
-                className="text-textSecondary hover:text-text"
+                className="text-accent2 hover:text-accent1"
                 title="Copy tags"
               >
                 <FaCopy />
@@ -124,7 +126,7 @@ export default function VideoInfo({ info }: VideoInfoProps) {
               {tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="bg-tableStripe text-textSecondary px-2 py-1 rounded-md text-sm"
+                  className="bg-background text-textSecondary px-2 py-1 rounded-md text-sm"
                 >
                   {tag}
                 </span>

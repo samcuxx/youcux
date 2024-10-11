@@ -1,11 +1,13 @@
 import Footer from "./components/Footer";
 import VideoExtractor from "./components/VideoExtractor";
+import FeatureList from "./components/FeatureList"; // Import the FeatureList component
 
 export default function Home() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <main>
         <VideoExtractor />
+        <FeatureList /> {/* Add the FeatureList component here */}
         <Instructions />
       </main>
       <Footer />

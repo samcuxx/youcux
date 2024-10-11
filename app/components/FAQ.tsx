@@ -19,11 +19,11 @@ export default function FAQ() {
 
   return (
     <section className="mt-8">
-      <h2 className="text-xl font-semibold mb-4">FAQ</h2>
+      <h2 className="text-xl font-semibold mb-4 text-textPrimary">FAQ</h2>
       <ul className="space-y-4">
         {faqs.map((faq, index) => (
           <li key={index}>
-            <h3 className="font-semibold text-text">{faq.question}</h3>
+            <h3 className="font-semibold text-textPrimary">{faq.question}</h3>
             <p className="text-textSecondary">{faq.answer}</p>
           </li>
         ))}
