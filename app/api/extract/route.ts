@@ -27,17 +27,19 @@ export async function GET(request: Request) {
     }
 
     const response = await youtube.videos.list({
-      part: ["snippet"],
+      part: ["snippet", "statistics"],
       id: [videoId],
     });
 
     const videoDetails = response.data.items?.[0]?.snippet;
+    const statistics = response.data.items?.[0]?.statistics;
 
     if (!videoDetails) {
       return NextResponse.json({ error: "Video not found" }, { status: 404 });
     }
 
     const videoInfo = {
+      videoId: videoId,
       thumbnail:
         videoDetails.thumbnails?.maxres?.url ||
         videoDetails.thumbnails?.high?.url ||
@@ -45,6 +47,9 @@ export async function GET(request: Request) {
       title: videoDetails.title,
       description: videoDetails.description,
       tags: videoDetails.tags || [],
+      viewCount: statistics?.viewCount || "0",
+      likeCount: statistics?.likeCount || "0",
+      commentCount: statistics?.commentCount || "0",
     };
 
     return NextResponse.json(videoInfo);

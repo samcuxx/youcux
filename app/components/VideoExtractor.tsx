@@ -13,7 +13,6 @@ export default function VideoExtractor() {
     setIsLoading(true);
     setError("");
     try {
-      // TODO: Implement API call to extract video information
       const response = await fetch(
         `/api/extract?url=${encodeURIComponent(url)}`
       );

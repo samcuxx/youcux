@@ -1,37 +1,27 @@
 import VideoExtractor from "./components/VideoExtractor";
-import Head from "next/head";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>YouTube Video Extractor</title>
-        <meta
-          name="description"
-          content="Extract information from YouTube videos easily"
-        />
-        <meta
-          name="keywords"
-          content="YouTube, video, extractor, thumbnail, title, description, tags"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="grid grid-rows-[auto_1fr_auto] min-h-screen">
-        <header className="p-4 bg-white shadow-md">
-          <h1 className="text-2xl font-bold text-center">
-            YouTube Video Extractor
-          </h1>
-        </header>
-        <main className="container mx-auto px-4 py-8">
-          <VideoExtractor />
-        </main>
-        <footer className="p-4 bg-gray-100 text-center">
-          <p className="text-sm text-gray-600">
-            © 2024 YouTube Video Extractor
-          </p>
-        </footer>
-      </div>
-    </>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <main>
+        <VideoExtractor />
+        <Instructions />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+function Instructions() {
+  return (
+    <section className="mt-8">
+      <h2 className="text-xl font-semibold mb-4">How to use:</h2>
+      <ol className="list-decimal list-inside space-y-2">
+        <li>Paste your YouTube video link in the input field above.</li>
+        <li>Click the search icon or press Enter.</li>
+        <li>View the extracted title, description, and other metadata.</li>
+      </ol>
+    </section>
   );
 }
