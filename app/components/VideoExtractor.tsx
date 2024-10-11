@@ -5,7 +5,6 @@ import VideoInput from "./VideoInput";
 import VideoInfo from "./VideoInfo";
 
 export default function VideoExtractor() {
-  const [videoUrl, setVideoUrl] = useState("");
   const [videoInfo, setVideoInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");

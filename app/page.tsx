@@ -1,4 +1,3 @@
-import Image from "next/image";
 import VideoExtractor from "./components/VideoExtractor";
 import Head from "next/head";
 
