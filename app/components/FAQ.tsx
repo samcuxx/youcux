@@ -23,8 +23,8 @@ export default function FAQ() {
       <ul className="space-y-4">
         {faqs.map((faq, index) => (
           <li key={index}>
-            <h3 className="font-semibold">{faq.question}</h3>
-            <p className="text-gray-600 dark:text-gray-400">{faq.answer}</p>
+            <h3 className="font-semibold text-text">{faq.question}</h3>
+            <p className="text-textSecondary">{faq.answer}</p>
           </li>
         ))}
       </ul>

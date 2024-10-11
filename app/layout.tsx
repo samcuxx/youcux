@@ -18,9 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ThemeProvider attribute="class">
+      <ThemeProvider
+        attribute="class"
+        enableSystem={true}
+        defaultTheme="system"
+      >
         <body
-          className={`${inter.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-white`}
+          className={`${inter.className} bg-background text-text`}
+          suppressHydrationWarning
         >
           <header className="p-4 flex justify-between items-center">
             <h1 className="text-2xl font-bold">

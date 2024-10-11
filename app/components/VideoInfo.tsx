@@ -1,6 +1,6 @@
 import Image from "next/image";
 import toast from "react-hot-toast";
-import { FaShareAlt, FaDownload, FaLink, FaCopy } from "react-icons/fa";
+import { FaDownload, FaLink, FaCopy } from "react-icons/fa";
 
 interface VideoInfoProps {
   info: {
@@ -43,7 +43,7 @@ export default function VideoInfo({ info }: VideoInfoProps) {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
+    <div className="bg-card shadow-md rounded-lg overflow-hidden">
       <div className="relative h-0 pb-[56.25%]">
         <Image
           src={thumbnail}
@@ -56,16 +56,16 @@ export default function VideoInfo({ info }: VideoInfoProps) {
       </div>
       <div className="p-6 space-y-4">
         <div className="flex justify-between items-start">
-          <h2 className="text-2xl font-bold">{title}</h2>
+          <h2 className="text-2xl font-bold text-text">{title}</h2>
           <button
             onClick={() => copyToClipboard(title, "Title")}
-            className="text-orange-500 hover:text-orange-600"
+            className="text-textSecondary hover:text-text"
             title="Copy title"
           >
             <FaCopy />
           </button>
         </div>
-        <div className="flex space-x-4 text-sm text-gray-600 dark:text-gray-400">
+        <div className="flex space-x-4 text-sm text-textSecondary">
           <span>{viewCount} views</span>
           <span>{likeCount} likes</span>
           <span>{commentCount} comments</span>
@@ -78,14 +78,14 @@ export default function VideoInfo({ info }: VideoInfoProps) {
                 "Video URL"
               )
             }
-            className="text-orange-500 hover:text-orange-600"
+            className="text-textSecondary hover:text-text"
             title="Copy video URL"
           >
             <FaLink />
           </button>
           <button
             onClick={downloadThumbnail}
-            className="text-orange-500 hover:text-orange-600"
+            className="text-textSecondary hover:text-text"
             title="Download thumbnail"
           >
             <FaDownload />
@@ -93,26 +93,28 @@ export default function VideoInfo({ info }: VideoInfoProps) {
         </div>
         <div>
           <div className="flex justify-between items-start">
-            <h3 className="text-lg font-semibold mb-2">Description</h3>
+            <h3 className="text-lg font-semibold mb-2 text-text">
+              Description
+            </h3>
             <button
               onClick={() => copyToClipboard(description, "Description")}
-              className="text-orange-500 hover:text-orange-600"
+              className="text-textSecondary hover:text-text"
               title="Copy description"
             >
               <FaCopy />
             </button>
           </div>
-          <p className="text-gray-600 dark:text-gray-400 whitespace-pre-wrap max-h-40 overflow-y-auto">
+          <p className="text-textSecondary whitespace-pre-wrap max-h-40 overflow-y-auto">
             {description}
           </p>
         </div>
         {tags.length > 0 && (
           <div>
             <div className="flex justify-between items-start">
-              <h3 className="text-lg font-semibold mb-2">Tags</h3>
+              <h3 className="text-lg font-semibold mb-2 text-text">Tags</h3>
               <button
                 onClick={() => copyToClipboard(tags.join(", "), "Tags")}
-                className="text-orange-500 hover:text-orange-600"
+                className="text-textSecondary hover:text-text"
                 title="Copy tags"
               >
                 <FaCopy />
@@ -122,7 +124,7 @@ export default function VideoInfo({ info }: VideoInfoProps) {
               {tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded-md text-sm"
+                  className="bg-tableStripe text-textSecondary px-2 py-1 rounded-md text-sm"
                 >
                   {tag}
                 </span>

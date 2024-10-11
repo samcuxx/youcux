@@ -33,7 +33,7 @@ export default function VideoInput({ onExtract, isLoading }: VideoInputProps) {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="Paste YouTube video URL here"
-          className="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-800 dark:border-gray-600"
+          className="flex-grow px-4 py-2 border border-border rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-background text-text"
         />
         <button
           type="submit"

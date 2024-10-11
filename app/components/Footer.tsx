@@ -21,15 +21,12 @@ export default function Footer() {
         <h2 className="text-xl font-semibold mb-4">Related Tools</h2>
         <div className="grid grid-cols-2 gap-4">
           {relatedTools.map((tool, index) => (
-            <div
-              key={index}
-              className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md"
-            >
-              <h3 className="font-semibold">{tool.name}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+            <div key={index} className="bg-card p-4 rounded-md">
+              <h3 className="font-semibold text-text">{tool.name}</h3>
+              <p className="text-sm text-textSecondary mb-2">
                 {tool.description}
               </p>
-              <button className="text-orange-500 hover:text-orange-600">
+              <button className="text-textSecondary hover:text-text">
                 Open
               </button>
             </div>

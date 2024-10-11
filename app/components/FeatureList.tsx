@@ -14,8 +14,8 @@ export default function FeatureList() {
       <ul className="grid grid-cols-2 gap-4">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center space-x-2">
-            <span className="text-orange-500">{feature.icon}</span>
-            <span>{feature.text}</span>
+            <span className="text-textSecondary">{feature.icon}</span>
+            <span className="text-text">{feature.text}</span>
           </li>
         ))}
       </ul>

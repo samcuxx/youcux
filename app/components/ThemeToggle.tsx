@@ -9,7 +9,9 @@ export default function ThemeToggle() {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return <div className="w-8 h-8"></div>; // Placeholder to maintain layout
+  }
 
   return (
     <button

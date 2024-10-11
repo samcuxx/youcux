@@ -7,11 +7,17 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
+  safelist: ["dark"],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--background-color)",
+        text: "var(--text-color)",
+        textSecondary: "var(--text-color-secondary)",
+        card: "var(--card-background)",
+        border: "var(--border-color)",
+        tableStripe: "var(--table-stripe-color)",
+        tableHover: "var(--table-hover-color)",
       },
     },
   },

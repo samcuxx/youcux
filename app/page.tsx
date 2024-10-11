@@ -1,5 +1,5 @@
-import VideoExtractor from "./components/VideoExtractor";
 import Footer from "./components/Footer";
+import VideoExtractor from "./components/VideoExtractor";
 
 export default function Home() {
   return (
